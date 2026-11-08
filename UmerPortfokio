@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Umer Creates · From RuneScape to AI Reels</title>
+<meta name="description" content="Umer Creates: RuneScape creator, then game developer, now an Instagram Reel creator using AI. Based in Pakistan.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eeede9; --card:#fff; --ink:#15151c; --muted:#5d5d6b; --line:#d7d5cf; --acc:#ff4b2b; --acc2:#2b5bff; --dark:#15151c; --darktext:#f4f3ef;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101015;--card:#1a1a22;--ink:#f4f3ef;--muted:#a1a0ae;--line:#2d2d38;--dark:#f4f3ef;--darktext:#15151c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101015;--card:#1a1a22;--ink:#f4f3ef;--muted:#a1a0ae;--line:#2d2d38;--dark:#f4f3ef;--darktext:#15151c;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","Arial Black",sans-serif;font-weight:800;line-height:1;margin:0;letter-spacing:-.03em}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc2);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;border:2px solid var(--ink);font-weight:700;text-decoration:none;background:transparent}
+.pill.solid{background:var(--ink);color:var(--bg)}
+.pill.hot{background:var(--acc);border-color:var(--acc);color:#fff}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav b{font:800 1.15rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:.95rem;font-weight:500}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:56px 0 48px}
+.live{display:inline-flex;gap:10px;align-items:center;font-size:.92rem;font-weight:700;margin-bottom:20px}
+.live::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--acc);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+h1{font-size:clamp(2.7rem,8.4vw,6rem)}
+h1 em{font-style:normal;color:var(--acc)}
+.hero p.sub{font-size:1.2rem;color:var(--muted);max-width:32em;margin:22px 0 26px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.me{aspect-ratio:4/5;border-radius:28px;background:linear-gradient(150deg,var(--acc),#ff9a3c 55%,var(--acc2));position:relative;overflow:hidden;display:grid;place-items:center;transform:rotate(2deg)}
+.me span{font:800 9rem "Bricolage Grotesque",sans-serif;color:#fff;opacity:.92}
+.me small{position:absolute;left:16px;bottom:14px;color:#fff;font-weight:700;background:#0000004d;padding:5px 12px;border-radius:999px}
+
+/* stat tiles */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:40px}
+.tile{background:var(--card);border-radius:20px;padding:20px;border:1px solid var(--line)}
+.tile b{display:block;font:800 1.9rem "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+.tile span{color:var(--muted);font-size:.92rem}
+
+/* marquee */
+.marq{background:var(--dark);color:var(--darktext);overflow:hidden;white-space:nowrap;padding:16px 0;font:800 1.1rem "Bricolage Grotesque",sans-serif}
+.marq div{display:inline-block;animation:slide 28s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* live counters */
+.livebox{background:var(--dark);color:var(--darktext);border-radius:36px;padding:44px 32px;margin-top:40px}
+.livebox .live{margin-bottom:8px}
+.livebox h2{font-size:clamp(1.8rem,4.4vw,2.8rem);max-width:none;margin-bottom:28px}
+.cnt{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.c{border:1px solid color-mix(in srgb,var(--darktext) 25%,transparent);border-radius:22px;padding:22px}
+.c.main{background:var(--acc);border-color:var(--acc);color:#fff}
+.c b{display:block;font:800 clamp(2rem,5vw,3.2rem)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.c span{display:block;margin-top:8px;font-size:.92rem;opacity:.85}
+.livebox small{display:block;margin-top:18px;opacity:.7}
+@media(max-width:820px){.cnt{grid-template-columns:1fr 1fr}}
+
+/* sections */
+section{padding:84px 0}
+.kick{font-weight:700;color:var(--acc);margin-bottom:12px}
+h2{font-size:clamp(2.1rem,5.6vw,3.8rem);max-width:12em}
+.lead{color:var(--muted);font-size:1.12rem;max-width:32em;margin:16px 0 36px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:28px}
+.sk i{font:normal 800 .95rem "DM Sans";color:var(--acc)}
+.sk h3{font-size:1.7rem;margin:10px 0}
+.sk p{margin:0;color:var(--muted)}
+
+/* story */
+.story{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+.sticky{position:sticky;top:100px;align-self:start}
+.chap{font-weight:700;color:var(--muted)}
+.big{font:800 clamp(4rem,12vw,8rem)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.05em;color:var(--acc);margin-top:6px}
+.bar{height:6px;border-radius:6px;background:var(--line);margin-top:22px;max-width:260px}
+.bar i{display:block;height:100%;width:33%;background:var(--acc);border-radius:6px;transition:width .3s}
+.ch{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px;margin-bottom:22px;min-height:260px}
+.ch .t{font-weight:700;color:var(--acc2)}
+.ch h3{font-size:2rem;margin:10px 0 12px}
+.ch p{margin:0;color:var(--muted);max-width:30em}
+
+/* work */
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.w{border-radius:26px;padding:26px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff}
+.w h3{font-size:1.6rem;margin-bottom:8px}
+.w p{margin:0 0 14px;opacity:.92;font-size:.98rem}
+.w a{font-weight:700}
+.w1{background:linear-gradient(160deg,#ff4b2b,#a3123a)}
+.w2{background:linear-gradient(160deg,#2b5bff,#1b2f8f)}
+.w3{background:linear-gradient(160deg,#15151c,#3b3b52)}
+
+/* follow */
+.follow{background:var(--dark);color:var(--darktext);border-radius:36px;padding:64px 32px;text-align:center;margin-bottom:56px}
+.follow h2{margin:0 auto 14px;max-width:11em}
+.follow p{opacity:.8;max-width:30em;margin:0 auto 28px}
+.follow .links{justify-content:center}
+.follow .pill{border-color:var(--darktext);color:var(--darktext)}
+.follow .pill.hot{border-color:var(--acc);color:#fff}
+footer{padding:0 0 48px;color:var(--muted);font-size:.92rem;text-align:center}
+
+@media(max-width:820px){
+  nav ul{gap:12px;font-size:.85rem}
+  nav ul li:nth-child(n+4){display:none}
+  .hero,.story{grid-template-columns:1fr}
+  .me{max-width:280px;order:-1}
+  .me span{font-size:6rem}
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  .skills,.work{grid-template-columns:1fr}
+  .sticky{position:static}
+  section{padding:60px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b>Umer Creates</b>
+  <ul>
+    <li><a href="#top">Home</a></li>
+    <li><a href="#livebox">Live</a></li>
+    <li><a href="#do">What I do</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#follow">Follow</a></li>
+  </ul>
+</div></nav>
+
+<main id="top">
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="live">Creating from Pakistan</div>
+      <h1>From <em>RuneScape</em> to AI Reels.</h1>
+      <p class="sub">I started as a RuneScape content creator, moved into game development, and now I make Instagram Reels with AI. Different tools every time, same goal: make something people want to watch.</p>
+      <div class="links">
+        <a class="pill hot" href="https://www.instagram.com/umercreatesoffical/" target="_blank" rel="noopener">Follow on Instagram</a>
+        <a class="pill" href="https://www.youtube.com/channel/UCPj4kly7A-DmxMcgTWs5i5Q" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <div class="me" aria-hidden="true"><span>U</span><small>@umercreatesoffical</small></div>
+  </header>
+
+  <div class="tiles">
+    <div class="tile"><b>3</b><span>chapters so far</span></div>
+    <div class="tile"><b>AI</b><span>powers every Reel</span></div>
+    <div class="tile"><b>2</b><span>platforms: Instagram and YouTube</span></div>
+    <div class="tile"><b>PK</b><span>made in Pakistan</span></div>
+  </div>
+</div>
+
+<div class="marq" aria-hidden="true"><div>
+  AI Reels ✦ Hooks and scripts ✦ Editing ✦ RuneScape ✦ Game development ✦ Made in Pakistan ✦ AI Reels ✦ Hooks and scripts ✦ Editing ✦ RuneScape ✦ Game development ✦ Made in Pakistan ✦ AI Reels ✦ Hooks and scripts ✦ Editing ✦ RuneScape ✦ Game development ✦ Made in Pakistan ✦ AI Reels ✦ Hooks and scripts ✦ Editing ✦ RuneScape ✦ Game development ✦ Made in Pakistan ✦&nbsp;
+</div></div>
+
+<div class="wrap"><div class="livebox" id="livebox">
+  <div class="live">Live numbers</div>
+  <h2>Real numbers, no rounding up.</h2>
+  <div class="cnt">
+    <div class="c main"><b data-k="followers">—</b><span>Instagram followers</span></div>
+    <div class="c main"><b data-k="views">—</b><span>Instagram views</span></div>
+    
+    
+  </div>
+  <small id="upd">Numbers coming soon.</small>
+</div></div>
+
+<section id="do"><div class="wrap">
+  <div class="kick">What I do</div>
+  <h2>Four skills, one creator.</h2>
+  <p class="lead">I take a Reel from idea to upload on my own, with AI handling the heavy lifting and me making the calls.</p>
+  <div class="skills">
+    <div class="sk"><i>01</i><h3>AI Reels</h3><p>Instagram Reels made with AI visuals, voices and tools, built to be watched to the end.</p></div>
+    <div class="sk"><i>02</i><h3>Hooks and scripts</h3><p>A strong first line, a clear payoff, and nothing in between that makes people scroll away.</p></div>
+    <div class="sk"><i>03</i><h3>Editing</h3><p>Pacing, captions, sound and cuts that make AI footage feel deliberate.</p></div>
+    <div class="sk"><i>04</i><h3>Game thinking</h3><p>Years around games taught me loops, rewards and keeping people engaged. I use the same ideas in every video.</p></div>
+  </div>
+</div></section>
+
+<section id="story" style="padding-top:20px"><div class="wrap">
+  <div class="kick">The story so far</div>
+  <h2>Three chapters. Still going.</h2>
+  <p class="lead">Scroll through how I got here.</p>
+  <div class="story">
+    <div class="sticky">
+      <div class="chap" id="chap">CHAPTER 1 / 3</div>
+      <div class="big" id="big">RS</div>
+      <div class="bar"><i id="pb"></i></div>
+    </div>
+    <div>
+      <article class="ch" data-n="1" data-big="RS">
+        <div class="t">Chapter 1</div>
+        <h3>RuneScape content creator</h3>
+        <p>This is where I started. I made RuneScape videos and learned the basics of the craft: finding a story in gameplay, editing it, and uploading again and again.</p>
+      </article>
+      <article class="ch" data-n="2" data-big="GD">
+        <div class="t">Chapter 2</div>
+        <h3>Game development</h3>
+        <p>I went from watching games to building them. Making games taught me how systems fit together, how to fix what breaks and how to finish what I start.</p>
+      </article>
+      <article class="ch" data-n="3" data-big="AI">
+        <div class="t">Chapter 3 · now</div>
+        <h3>Instagram Reel creator on AI</h3>
+        <p>Today I run Umer Creates and make Reels with AI. Everything from the first two chapters feeds into short videos that are quick to watch and built with care.</p>
+      </article>
+    </div>
+  </div>
+</div></section>
+
+<section id="work" style="padding-top:20px"><div class="wrap">
+  <div class="kick">Work</div>
+  <h2>Where to watch what I make.</h2>
+  <p class="lead">New Reels go up on Instagram, and longer videos live on YouTube.</p>
+  <div class="work">
+    <div class="w w1"><h3>Instagram Reels</h3><p>My AI Reels, posted on @umercreatesoffical.</p><a href="https://www.instagram.com/umercreatesoffical/" target="_blank" rel="noopener">Open Instagram ↗</a></div>
+    <div class="w w2"><h3>YouTube</h3><p>Videos on the Umer Creates channel.</p><a href="https://www.youtube.com/channel/UCPj4kly7A-DmxMcgTWs5i5Q" target="_blank" rel="noopener">Open YouTube ↗</a></div>
+    <div class="w w3"><h3>Collabs</h3><p>Want a Reel made or a creator to team up with? Send me a message on Instagram.</p><a href="https://www.instagram.com/umercreatesoffical/" target="_blank" rel="noopener">Message me ↗</a></div>
+  </div>
+</div></section>
+
+<div class="wrap" id="follow">
+  <div class="follow">
+    <h2>Watch what I make next.</h2>
+    <p>I post new Reels and videos from Pakistan. Pick a platform and come along.</p>
+    <div class="links">
+      <a class="pill hot" href="https://www.instagram.com/umercreatesoffical/" target="_blank" rel="noopener">Follow on Instagram</a>
+      <a class="pill" href="https://www.youtube.com/channel/UCPj4kly7A-DmxMcgTWs5i5Q" target="_blank" rel="noopener">Subscribe on YouTube</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>© 2026 Umer Creates · @umercreatesoffical · Pakistan</footer>
+
+<script>
+(function(){
+  // Update these from your analytics. Total followers adds up Instagram and YouTube.
+  var STATS={ig:27,yt:null,views:1540,updated:'8 Nov 2026'};
+  STATS.followers=(STATS.ig==null&&STATS.yt==null)?null:(STATS.ig||0)+(STATS.yt||0);
+  var els=[].slice.call(document.querySelectorAll('[data-k]'));
+  var fmt=new Intl.NumberFormat('en-US');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function run(el){
+    var v=STATS[el.dataset.k];
+    if(v==null){return;}
+    if(reduce){el.textContent=fmt.format(v);return;}
+    var t0=null,d=1800;
+    function step(t){
+      if(!t0)t0=t;
+      var p=Math.min(1,(t-t0)/d),e=1-Math.pow(1-p,3);
+      el.textContent=fmt.format(Math.round(v*e));
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if(STATS.updated)document.getElementById('upd').textContent='Last updated '+STATS.updated+'.';
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(x){if(x.isIntersecting){els.forEach(run);io.disconnect();}});
+    },{threshold:.3});
+    io.observe(document.getElementById('livebox'));
+  }else{els.forEach(run);}
+})();
+(function(){
+  var cards=[].slice.call(document.querySelectorAll('.ch'));
+  var chap=document.getElementById('chap'),big=document.getElementById('big'),pb=document.getElementById('pb');
+  function upd(){
+    var mid=window.innerHeight*0.5,cur=cards[0];
+    cards.forEach(function(c){if(c.getBoundingClientRect().top<mid)cur=c;});
+    chap.textContent='CHAPTER '+cur.dataset.n+' / 3';
+    big.textContent=cur.dataset.big;
+    pb.style.width=(cur.dataset.n/3*100)+'%';
+  }
+  window.addEventListener('scroll',upd,{passive:true});
+  window.addEventListener('resize',upd);
+  upd();
+})();
+</script>
+</body>
+</html>
